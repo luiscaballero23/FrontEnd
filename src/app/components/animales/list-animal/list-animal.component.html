@@ -1,0 +1,24 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let animal of animalService.list">
+            <td>{{ animal.numero}}</td>
+            <td>{{ animal.numeroRaya}}</td>
+            <td>{{ animal.idRaza}}</td>
+            <td>
+                <i class="far fa-edit fa lg text-info" (click)="editarAnimal(animal)" style="cursor: pointer;"></i>
+            </td>
+            <td>
+                <i class="far fa-trash-alt fa lg text-danger" (click)="eliminarAnimal(animal.idAnimal)" style="cursor: pointer;"></i>
+            </td>
+        </tr>
+    </tbody>
+</table>
